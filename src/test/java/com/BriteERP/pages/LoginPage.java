@@ -2,6 +2,7 @@ package com.BriteERP.pages;
 
 import com.BriteERP.utilietes.ConfigurationReader;
 import com.BriteERP.utilietes.Driver;
+import com.BriteERP.utilietes.Pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -24,6 +25,10 @@ public class LoginPage {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement login;
 
+    @FindBy(xpath = "(//a[@class='oe_menu_toggler'])[2]")
+    public WebElement crmButtn;
+
+
     public void singin(String usr, String pass) {
         BriteErpDemo_button.sendKeys();
         email.sendKeys(usr);
@@ -35,6 +40,19 @@ public class LoginPage {
         public void open() {
             Driver.getDriver().get(ConfigurationReader.getProperty("url"));
 
+    }
+    public void login() {
+
+        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+
+        BriteErpDemo_button.click();
+        email.sendKeys(ConfigurationReader.getProperty("manager"));
+        password.sendKeys(ConfigurationReader.getProperty("managerpass"));
+        login.click();
+    }
+
+    public void crm(){
+        crmButtn.click();
     }
 }
 

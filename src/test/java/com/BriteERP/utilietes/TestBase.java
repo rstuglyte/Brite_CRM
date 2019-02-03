@@ -1,5 +1,7 @@
 package com.BriteERP.utilietes;
 
+import com.BriteERP.pages.LoginPage;
+import com.BriteERP.pages.SalesChannelsPage;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
@@ -15,7 +17,9 @@ import java.util.concurrent.TimeUnit;
 
 public abstract class TestBase {
     protected WebDriver driver;
-    protected Pages pages;
+
+    protected LoginPage loginPage;
+    protected SalesChannelsPage salesChannels;
 
     protected static ExtentReports report;
     protected static ExtentHtmlReporter htmlReporter;
@@ -26,7 +30,8 @@ public abstract class TestBase {
         driver = Driver.getDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get(ConfigurationReader.getProperty("url"));
-        pages = new Pages();
+        loginPage = new LoginPage();
+        salesChannels = new SalesChannelsPage();
     }
 
     @AfterMethod

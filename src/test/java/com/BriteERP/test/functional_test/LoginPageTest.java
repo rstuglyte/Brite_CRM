@@ -16,11 +16,11 @@ public class LoginPageTest extends TestBase {
     @Test()
     public void singInTest(){
 
-    pages.loginPage().BriteErpDemo_button.click();
-    pages.loginPage().email.sendKeys("EventsCRM_Manager@info.com");
-    pages.loginPage().password.sendKeys("Ugh45wQ12");
-    pages.loginPage().login.click();
-    pages.crmPage().crmButtn.click();
+//    loginPage().BriteErpDemo_button.click();
+//    pages.loginPage().email.sendKeys("EventsCRM_Manager@info.com");
+//    pages.loginPage().password.sendKeys("Ugh45wQ12");
+//    pages.loginPage().login.click();
+//    pages.crmPage().crmButtn.click();
 
 
 
