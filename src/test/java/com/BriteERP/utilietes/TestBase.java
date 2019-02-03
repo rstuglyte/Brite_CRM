@@ -3,12 +3,10 @@ package com.BriteERP.utilietes;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.beust.jcommander.Parameter;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -21,15 +19,16 @@ public abstract class TestBase {
     protected static ExtentHtmlReporter htmlReporter;
     protected static ExtentTest extentLogger;
 
-    @BeforeMethod
-    public void setupMethod() {
-        driver = Driver.getDriver();
+    @Parameters("browser")
+    @BeforeMethod(alwaysRun = true)
+    public void setupMethod(@Optional String browser) {
+        driver = Driver.getDriver(browser);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get(ConfigurationReader.getProperty("url"));
         pages = new Pages();
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void tearDownMethod(ITestResult result) throws IOException {
         //  if any test fails, it can detect it, take a screen shot at the point and attach to report
         if (result.getStatus() == ITestResult.FAILURE) {
@@ -44,7 +43,7 @@ public abstract class TestBase {
         Driver.closeDriver();
     }
 
-    @BeforeTest
+    @BeforeTest(alwaysRun = true)
     public void setUpTest() {
         report = new ExtentReports();
         //this is our custom location of the report that will be generated
@@ -61,15 +60,15 @@ public abstract class TestBase {
         report.setSystemInfo("Browser", ConfigurationReader.getProperty("browser"));
         report.setSystemInfo("OS", System.getProperty("os.name"));
 
-        report.setSystemInfo("QA Engineer","Rasa Stuglyte");
+        report.setSystemInfo("QA Team","Tyson_12");
 
-        htmlReporter.config().setDocumentTitle("Prestashop Reports");
-        htmlReporter.config().setReportName("Prestashop Automated Test Reports");
+        htmlReporter.config().setDocumentTitle("BriteERP Reports");
+        htmlReporter.config().setReportName("BriteERP Automated Test Reports");
 //        htmlReporter.config().setTheme(Theme.DARK);
 
     }
 
-    @AfterTest
+    @AfterTest(alwaysRun = true)
     public void tearDownTest() {
         report.flush();
     }

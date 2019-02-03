@@ -17,9 +17,14 @@ public class Driver {
 
     private static WebDriver driver;
 
-    public static WebDriver getDriver() {
+    public static WebDriver getDriver(String browser) {
+
+
         if (driver == null) {
-            switch (ConfigurationReader.getProperty("browser")) {
+
+            browser= browser==null ? ConfigurationReader.getProperty("browser") : browser;
+
+            switch (browser) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
@@ -61,15 +66,23 @@ public class Driver {
                     WebDriverManager.getInstance(SafariDriver.class).setup();
                     driver = new SafariDriver();
                     break;
+
+                 default:
+                     System.out.println("You enter a invalid browser");
             }
         }
 
         return driver;
     }
 
+
+    public static WebDriver getDriver(){
+        return Driver.getDriver(null);
+    }
+
     public static void closeDriver() {
         if (driver != null) {
-          //  driver.quit();
+            //  driver.quit();
             driver = null;
         }
     }

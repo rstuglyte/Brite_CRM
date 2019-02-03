@@ -1,14 +1,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="WebOrders" verbose="2">
+<suite name="BriteERP" verbose="1" parallel="tests" thread-count="2">
 
-    <test name="WebOrders Automated Tests">
+    <test name="BriteERP Login Tests">
         <classes>
-            <class name="com.weborders.tests.functional_tests.login.ErrorMessageValidationTest">
-                <methods>
-                    <include name="blankPassword"/>
-                </methods>
-            </class>
+           <class name="com.BriteERP.test.smoke_test.LoginPageTest"/>
         </classes>
     </test>
+
 
 </suite>

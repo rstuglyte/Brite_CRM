@@ -32,7 +32,7 @@ public class LoginPage {
 
     }
 
-        public void open() {
+    public void open() {
             Driver.getDriver().get(ConfigurationReader.getProperty("url"));
 
     }

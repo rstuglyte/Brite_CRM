@@ -1,4 +1,4 @@
-package com.BriteERP.test.functional_test;
+package com.BriteERP.test.smoke_test;
 
 import com.BriteERP.pages.LoginPage;
 import com.BriteERP.utilietes.ApplicationConstants;
@@ -13,7 +13,7 @@ import static org.testng.Assert.fail;
 public class LoginPageTest extends TestBase {
 
 
-    @Test()
+    @Test(groups="regression")
     public void singInTest(){
 
     pages.loginPage().BriteErpDemo_button.click();

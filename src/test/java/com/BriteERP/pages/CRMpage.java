@@ -15,6 +15,9 @@ public class CRMpage {
     @FindBy(xpath = "(//a[@class='oe_menu_toggler'])[2]")
     public WebElement crmButtn;
 
+    @FindBy(xpath = "//a[@data-menu=\"268\"]/span")
+    public WebElement activityTypes;
+
 
 
 }

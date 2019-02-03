@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Web Orders Regression">
+<suite name="BriteERP Regression">
 
     <test name="Regression">
         <groups>
@@ -9,8 +9,7 @@
         </groups>
 
         <classes>
-            <class name="com.weborders.tests.functional_tests.login.ErrorMessageValidationTest"/>
-            <class name="com.weborders.tests.functional_tests.order.checkPrice"/>
+            <class name="com.BriteERP.test.smoke_test.LoginPageTest"/>
         </classes>
     </test>
 </suite>
