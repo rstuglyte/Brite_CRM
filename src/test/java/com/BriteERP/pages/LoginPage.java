@@ -25,7 +25,7 @@ public class LoginPage {
     public WebElement login;
 
     public void singin(String usr, String pass) {
-        BriteErpDemo_button.sendKeys();
+        BriteErpDemo_button.click();
         email.sendKeys(usr);
         password.sendKeys(pass);
         login.click();
