@@ -1,7 +1,7 @@
 package com.BriteERP.utilietes;
 
 public class ApplicationConstants {
-    public static final String LOGIN_ERROR_MESSAGE = "Invalid Login or Password.";
+    public static final String HOME_PAGE_TITLE = "Pipeline - Odoo";
     public static final String LIST_OF_ALL_ORDERS = "List of All Orders";
     public static final String LIST_OF_ALL_PRODUCTS = "List of Products";
     public static final String ORDER = "Order";
