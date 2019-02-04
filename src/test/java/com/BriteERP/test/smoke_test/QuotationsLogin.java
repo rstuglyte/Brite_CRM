@@ -11,7 +11,7 @@ import javax.xml.ws.RequestWrapper;
 public class QuotationsLogin extends TestBase {
 
     @Test
-    public void TestCase_724(){
+    public void clickQuotations (){
         extentLogger = report.createTest("Automating TestCase 724");
         extentLogger.info("Log in into website as a Manager");
         pages.loginPage().singin(ConfigurationReader.getProperty("manager"), ConfigurationReader.getProperty("managerpass"));
@@ -20,8 +20,7 @@ public class QuotationsLogin extends TestBase {
         WebDriverWait wait = new WebDriverWait(driver , 10);
         extentLogger.info("Click on Quotations functionality");
         wait.until(ExpectedConditions.elementToBeClickable(pages.quotationsPage().quotButton)).click();
-        extentLogger.info("Click on Create button");
-        wait.until(ExpectedConditions.elementToBeClickable(pages.quotationsPage().createButton)).click();
+
 
     }
 
