@@ -22,10 +22,8 @@ public class LoginPageTest extends TestBase {
     pages.loginPage().login.click();
     pages.crmPage().crmButtn.click();
 
-
-
-
     }
+
 
 
 
