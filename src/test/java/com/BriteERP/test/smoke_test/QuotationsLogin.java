@@ -1,5 +1,6 @@
 package com.BriteERP.test.smoke_test;
 
+import com.BriteERP.utilietes.ConfigurationReader;
 import com.BriteERP.utilietes.TestBase;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -13,7 +14,7 @@ public class QuotationsLogin extends TestBase {
     public void TestCase_724(){
         extentLogger = report.createTest("Automating TestCase 724");
         extentLogger.info("Log in into website as a Manager");
-        pages.loginPage().singinManager();
+        pages.loginPage().singin(ConfigurationReader.getProperty("manager"), ConfigurationReader.getProperty("managerpass"));
         extentLogger.info("Click in on CRM module");
         pages.crmPage().crmButtn.click();
         WebDriverWait wait = new WebDriverWait(driver , 10);

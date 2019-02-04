@@ -32,13 +32,14 @@ public class Pages {
 
     public CRMpage crmPage(){
         if(crmPage == null){
+
             crmPage = new CRMpage();
         }
         return crmPage;
     }
 
     public Quotations quotationsPage(){
-        if(quotationsPage() == null){
+        if(quotationsPage == null){
            quotationsPage = new Quotations();
         }
         return quotationsPage;
