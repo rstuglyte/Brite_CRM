@@ -24,6 +24,7 @@ public abstract class TestBase {
     protected static ExtentReports report;
     protected static ExtentHtmlReporter htmlReporter;
     protected static ExtentTest extentLogger;
+    protected  Pages pages;
 
     @BeforeMethod
     public void setupMethod() {
@@ -31,6 +32,8 @@ public abstract class TestBase {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get(ConfigurationReader.getProperty("url"));
         loginPage = new LoginPage();
+        pages = new Pages();
+
         salesChannels = new SalesChannelsPage();
     }
 

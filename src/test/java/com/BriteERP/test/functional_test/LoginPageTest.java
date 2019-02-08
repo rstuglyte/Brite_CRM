@@ -3,6 +3,7 @@ package com.BriteERP.test.functional_test;
 import com.BriteERP.pages.LoginPage;
 import com.BriteERP.utilietes.ApplicationConstants;
 import com.BriteERP.utilietes.ConfigurationReader;
+import com.BriteERP.utilietes.Pages;
 import com.BriteERP.utilietes.TestBase;
 import javafx.application.Application;
 import org.testng.Assert;
@@ -16,28 +17,15 @@ public class LoginPageTest extends TestBase {
     @Test()
     public void singInTest(){
 
-//    loginPage().BriteErpDemo_button.click();
-//    pages.loginPage().email.sendKeys("EventsCRM_Manager@info.com");
-//    pages.loginPage().password.sendKeys("Ugh45wQ12");
-//    pages.loginPage().login.click();
-//    pages.crmPage().crmButtn.click();
-
-
-
+    pages.loginPage().BriteErpDemo_button.click();
+    pages.loginPage().email.sendKeys("EventsCRM_Manager@info.com");
+    pages.loginPage().password.sendKeys("Ugh45wQ12");
+    pages.loginPage().login.click();
+    pages.crmPage().crmButtn.click();
 
     }
 
-
-
 }
-
-
-
-
-
-
-
-
 
 
 //        extentLogger = report.createTest("Sing in test");
@@ -55,4 +43,4 @@ public class LoginPageTest extends TestBase {
 //       fail();
 //       extentLogger.pass("");
 //
-//pass
+//password

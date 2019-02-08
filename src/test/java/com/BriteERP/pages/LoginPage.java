@@ -41,20 +41,13 @@ public class LoginPage {
             Driver.getDriver().get(ConfigurationReader.getProperty("url"));
 
     }
+
     public void login() {
-
-        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
-
-        BriteErpDemo_button.click();
-        email.sendKeys(ConfigurationReader.getProperty("manager"));
-        password.sendKeys(ConfigurationReader.getProperty("managerpass"));
-        login.click();
     }
 
-    public void crm(){
-        crmButtn.click();
+    // public void crm(){
+      //  crmButtn.click();
     }
-}
 
 
 
