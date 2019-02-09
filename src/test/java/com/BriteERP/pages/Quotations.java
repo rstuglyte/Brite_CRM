@@ -19,8 +19,8 @@ public class Quotations {
         @FindBy(xpath = "(//input[@class='o_input ui-autocomplete-input'])[1]")
         public WebElement customer;
 
-        @FindBy(xpath = "(//li[@class='o_m2o_dropdown_option ui-menu-item'])[3]/a")
-        public WebElement createAndEdit;
+       //@FindBy(xpath = "(//li[@class='o_m2o_dropdown_option ui-menu-item'])[3]/a")
+       // public WebElement createAndEdit;
 
         @FindBy(xpath = "(//input[@class='o_input ui-autocomplete-input'])[2]")
         public WebElement invoiceAddress;
@@ -38,11 +38,28 @@ public class Quotations {
         public WebElement paymentTerms;
 
 
-        @FindBy(xpath = "//input[@class='o_input ui-autocomplete-input']")
-        public Select select;
-
         @FindBy(xpath = "(//input[@class='o_input ui-autocomplete-input'])[1]")
         public WebElement select1;
+
+        @FindBy(xpath="(//li[@class='o_m2o_dropdown_option ui-menu-item'])[1]")
+        public WebElement searchMore;
+
+        @FindBy(xpath = "(//li[@class='o_m2o_dropdown_option ui-menu-item'])[2]")
+        public WebElement createAndEdit ;
+
+        //button[@accesskey='s']
+        @FindBy(xpath = "//button[@class='btn btn-primary btn-sm o_form_button_save']")
+        public WebElement save;
+
+        //@FindBy(xpath = "//button[@accesskey='j']")
+        @FindBy(xpath = "//button[@class='btn btn-default btn-sm o_form_button_cancel']")
+        public WebElement discard;
+
+        @FindBy(xpath = "//button[@class='btn btn-sm btn-default btn-primary']")
+        public WebElement sendByEmail;
+
+        @FindBy(xpath = "//button[@class='btn btn-sm btn-default btn-primary o_sale_print']")
+        public WebElement print;
 
 
     }

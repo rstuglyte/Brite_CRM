@@ -5,6 +5,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.beust.jcommander.Parameter;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 
@@ -15,6 +16,7 @@ public abstract class TestBase extends BrowserUtils{
     protected WebDriver driver;
     protected Pages pages;
 
+    protected Actions actions;
     protected static ExtentReports report;
     protected static ExtentHtmlReporter htmlReporter;
     protected static ExtentTest extentLogger;
@@ -24,8 +26,10 @@ public abstract class TestBase extends BrowserUtils{
     public void setupMethod(@Optional String browser) {
         driver = Driver.getDriver(browser);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
         driver.get(ConfigurationReader.getProperty("url"));
         pages = new Pages();
+        actions = new Actions(driver);
     }
 
     @AfterMethod(alwaysRun = true)
