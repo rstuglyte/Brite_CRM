@@ -1,4 +1,4 @@
-package com.BriteERP.utilietes;
+package com.BriteERP.utilieties;
 
 public class ApplicationConstants {
     public static final String HOME_PAGE_TITLE = "#Inbox - Odoo";

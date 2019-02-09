@@ -1,8 +1,8 @@
 package com.BriteERP.test.functional_test;
 
-import com.BriteERP.utilietes.ApplicationConstants;
-import com.BriteERP.utilietes.BrowserUtils;
-import com.BriteERP.utilietes.TestBase;
+import com.BriteERP.utilieties.ApplicationConstants;
+import com.BriteERP.utilieties.BrowserUtils;
+import com.BriteERP.utilieties.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

@@ -1,4 +1,4 @@
-package com.BriteERP.utilietes;
+package com.BriteERP.utilieties;
 
 import java.io.FileInputStream;
 import java.io.IOException;

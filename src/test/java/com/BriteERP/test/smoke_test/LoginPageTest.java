@@ -2,11 +2,8 @@ package com.BriteERP.test.smoke_test;
 
 import com.BriteERP.pages.CRMpage;
 import com.BriteERP.pages.LoginPage;
-import com.BriteERP.utilietes.ApplicationConstants;
-import com.BriteERP.utilietes.ConfigurationReader;
-import com.BriteERP.utilietes.TestBase;
-import javafx.application.Application;
-import org.testng.Assert;
+import com.BriteERP.utilieties.ApplicationConstants;
+import com.BriteERP.utilieties.TestBase;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;

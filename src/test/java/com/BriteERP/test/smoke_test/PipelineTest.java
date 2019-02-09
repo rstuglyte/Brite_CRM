@@ -1,10 +1,8 @@
 package com.BriteERP.test.smoke_test;
 
-import com.BriteERP.utilietes.ApplicationConstants;
-import com.BriteERP.utilietes.BrowserUtils;
-import com.BriteERP.utilietes.TestBase;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.PageFactory;
+import com.BriteERP.utilieties.ApplicationConstants;
+import com.BriteERP.utilieties.BrowserUtils;
+import com.BriteERP.utilieties.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

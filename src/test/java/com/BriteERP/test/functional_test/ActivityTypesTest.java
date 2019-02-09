@@ -1,13 +1,8 @@
 package com.BriteERP.test.functional_test;
 
-import com.BriteERP.pages.ActivityTypesPage;
-import com.BriteERP.pages.LoginPage;
-import com.BriteERP.utilietes.ConfigurationReader;
-import com.BriteERP.utilietes.Driver;
-import com.BriteERP.utilietes.TestBase;
+import com.BriteERP.utilieties.Driver;
+import com.BriteERP.utilieties.TestBase;
 //import com.github.javafaker.Faker;
-import net.bytebuddy.pool.TypePool;
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;

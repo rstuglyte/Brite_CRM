@@ -1,4 +1,4 @@
-package com.BriteERP.utilietes;
+package com.BriteERP.utilieties;
 
 import com.google.common.base.Function;
 import org.apache.commons.io.FileUtils;

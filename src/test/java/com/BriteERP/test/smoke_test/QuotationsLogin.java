@@ -1,12 +1,10 @@
 package com.BriteERP.test.smoke_test;
 
-import com.BriteERP.utilietes.ConfigurationReader;
-import com.BriteERP.utilietes.TestBase;
+import com.BriteERP.utilieties.ConfigurationReader;
+import com.BriteERP.utilieties.TestBase;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-
-import javax.xml.ws.RequestWrapper;
 
 public class QuotationsLogin extends TestBase {
 

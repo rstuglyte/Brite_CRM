@@ -1,16 +1,9 @@
 package com.BriteERP.test.functional_test;
 
-import com.BriteERP.utilietes.ConfigurationReader;
-import com.BriteERP.utilietes.TestBase;
-import com.github.javafaker.Faker;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
+import com.BriteERP.utilieties.ConfigurationReader;
+import com.BriteERP.utilieties.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.util.List;
 
 public class QuotationsTest extends TestBase {
 

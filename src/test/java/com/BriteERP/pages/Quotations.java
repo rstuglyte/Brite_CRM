@@ -1,10 +1,9 @@
 package com.BriteERP.pages;
 
-import com.BriteERP.utilietes.Driver;
+import com.BriteERP.utilieties.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 
 public class Quotations {
 

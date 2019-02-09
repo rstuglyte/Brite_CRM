@@ -1,9 +1,10 @@
-package com.BriteERP.utilietes;
+package com.BriteERP.utilieties;
 
+import com.BriteERP.pages.LoginPage;
+import com.BriteERP.pages.SalesChannelsPage;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.beust.jcommander.Parameter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.ITestResult;
@@ -14,12 +15,15 @@ import java.util.concurrent.TimeUnit;
 
 public abstract class TestBase extends BrowserUtils{
     protected WebDriver driver;
-    protected Pages pages;
+
+    protected LoginPage loginPage;
+    protected SalesChannelsPage salesChannels;
 
     protected Actions actions;
     protected static ExtentReports report;
     protected static ExtentHtmlReporter htmlReporter;
     protected static ExtentTest extentLogger;
+    protected  Pages pages;
 
     @Parameters("browser")
     @BeforeMethod(alwaysRun = true)
@@ -28,8 +32,14 @@ public abstract class TestBase extends BrowserUtils{
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get(ConfigurationReader.getProperty("url"));
+        loginPage = new LoginPage();
         pages = new Pages();
+
         actions = new Actions(driver);
+
+
+        salesChannels = new SalesChannelsPage();
+
     }
 
     @AfterMethod(alwaysRun = true)
